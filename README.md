@@ -1,2 +1,2 @@
-# eng_soft_tp
+# The Queens Gambit
 Repositório para o trabalho de Engenharia de Software
