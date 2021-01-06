@@ -23,3 +23,7 @@ Além disso, os usuários poderão se adicionar como amigos.
 - Frontend: React.js
 - Banco de dados relacional em memória H2
 - Gerenciamento do projeto e comunicação:  SCRUM, Trello, Discord/Teams
+
+## Metodologia:
+
+- Scrum utilizando o Trello
