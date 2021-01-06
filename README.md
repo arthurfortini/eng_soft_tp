@@ -26,4 +26,8 @@ Além disso, os usuários poderão se adicionar como amigos.
 
 ## Metodologia:
 
-- Scrum utilizando o Trello
+Scrum utilizando o Trello: 
+https://trello.com/b/7P44gETe/eng-soft-tp
+
+Esquemáticos e discussões visuais utilizando o Miro:
+https://miro.com/app/board/o9J_lZ0hJTU=/
