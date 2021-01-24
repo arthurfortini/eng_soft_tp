@@ -16,6 +16,34 @@ import java.util.Set;
 @EnableAutoConfiguration
 public class User implements Serializable {
 
+    public User() {}
+
+    public User(String login,
+                String fullName,
+                Long age,
+                String cityName,
+                String cellphone,
+                String homephone,
+                String insta,
+                String face,
+                String twitter,
+                DaysOfWeek availableIn,
+                String password,
+                Date createdAt)
+    {
+            this.login = login;
+            this.fullName = fullName;
+            this.age = age;
+            this.cityName = cityName;
+            this.cellphone = cellphone;
+            this.homephone = homephone;
+            this.insta = insta;
+            this.face = face;
+            this.twitter = twitter;
+            this.availableIn = availableIn;
+            this.password = password;
+            this.createdAt = createdAt;
+    }
 
     @Id
     @NotNull
