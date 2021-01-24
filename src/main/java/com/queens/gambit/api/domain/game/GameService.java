@@ -1,5 +1,8 @@
 package com.queens.gambit.api.domain.game;
 
+import com.queens.gambit.api.application.MessageConstants;
+import com.queens.gambit.api.application.exception.ResourceNotFoundException;
+import com.queens.gambit.api.domain.user.User;
 import com.queens.gambit.api.infrastructure.persistence.GameRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +17,14 @@ public class GameService {
     @Inject
     GameRepository gameRepository;
 
-    public List<Game> getAllGames() {
-        return Optional.ofNullable(gameRepository.findAll()).orElse(new ArrayList<>());
+    public Game findGameByFullName(String fullName){
+
+        Optional<Game> gameOptional = gameRepository.findById(fullName);
+
+        if(!gameOptional.isPresent()) {
+            throw new ResourceNotFoundException(String.format(MessageConstants.MESSAGE_GAME_NOT_FOUND, fullName));
+        }
+
+        return gameOptional.get();
     }
 }
