@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from 'src/app/shared/account.service';
 
 import { User } from 'src/User'
 
@@ -9,17 +11,33 @@ import { User } from 'src/User'
 })
 export class AccountComponent implements OnInit {
 
-  create_account: User = {
+  account: User = {
     login: '',
     password: '',
     full_name: '',
     age: 0,
     created_at: '',
     city_code: '',
-    avaible_in: ''
+    avaible_in: '',
+    cellphone: '',
+    home_phone:'',
+    insta: '',
+    face: '',
+    twitter: ''
   }
 
-  constructor() { }
+  constructor( private http: HttpClient, private accountService: AccountService) { }
+
+  async onSubmit(){
+    try {
+      const result = await this.accountService.createAccount(this.account);
+
+      window.alert("YOur account has been created!");
+      console.log(result);
+    } catch(error){
+      console.error(error);
+    }
+  }
 
   ngOnInit(): void {
   }
