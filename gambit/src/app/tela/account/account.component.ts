@@ -4,6 +4,8 @@ import { AccountService } from 'src/app/shared/account.service';
 
 import { User } from 'src/User'
 
+import { User } from 'src/User'
+
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
