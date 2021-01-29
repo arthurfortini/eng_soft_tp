@@ -9,6 +9,8 @@ import { AuthenticationComponent } from './layout/authentication/authentication.
 import { MainScreenComponent } from './layout/main-screen/main-screen.component';
 import { PerfilComponent } from './tela/perfil/perfil.component';
 import { FormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
+import { httpInterceptorProviders} from './http-interceptors';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,10 @@ import { FormsModule } from '@angular/forms'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ httpInterceptorProviders ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

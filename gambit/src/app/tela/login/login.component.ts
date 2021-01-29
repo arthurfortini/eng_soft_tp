@@ -12,7 +12,7 @@ import { User } from 'src/User';
 export class LoginComponent implements OnInit {
 
   login = {
-    name: '',
+    login: '',
     password: ''
   }
 
@@ -28,6 +28,10 @@ export class LoginComponent implements OnInit {
     }catch(error){
       console.error("erro");
     }
+  }
+
+  goToCreateAcc(){
+    this.router.navigate(['/create-account']);
   }
 
   ngOnInit(): void {

@@ -1,11 +1,16 @@
-
-<p class="texto">Registro</p>
+<p class="texto">Create an account</p>
 <div class="Registro">
-<form>
+<form (ngSubmit)="onSubmit()" #form="ngForm">
 
-  <span class="fontawesome-user"></span><input type="text" required placeholder="User" autocomplete="off">
-  <span class="fontawesome-envelope-alt"></span><input type="text" id="email" required placeholder="Email" autocomplete="off">
-  <span class="fontawesome-lock"></span><input type="password" name="password" id="password" required placeholder="Password" autocomplete="off">
-      <input type="submit" value="Register" title="Register">
-
+  <span class="fontawesome-user"></span><input type="text" placeholder="Usuario" autocomplete="off" [(ngModel)]="account.login" required >
+  <span class="fontawesome-lock"></span><input type="password" placeholder="Senha" autocomplete="off" [(ngModel)]="account.password" required>
+  <span class="fontawesome-user"></span><input type="text" placeholder="Full Name" autocomplete="off" [(ngModel)]="account.full_name" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Age" autocomplete="off" [(ngModel)]="account.age" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="City" autocomplete="off" [(ngModel)]="account.city_code" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Cellphone" autocomplete="off" [(ngModel)]="account.cellphone" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Home phone" autocomplete="off" [(ngModel)]="account.home_phone" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Instagram" autocomplete="off" [(ngModel)]="account.insta" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Twitter" autocomplete="off" [(ngModel)]="account.twitter" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Facebook" autocomplete="off" [(ngModel)]="account.face" required >
+      <input type="submit" value="Create" title="Register">
 </form>

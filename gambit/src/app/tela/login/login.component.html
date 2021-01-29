@@ -1,13 +1,13 @@
 <p class="texto">Login</p>
 <div class="Login">
-<form (ngSubmit)="onSubmit()">
+<form (ngSubmit)="onSubmit()" #form="ngForm">
 
-  <span class="fontawesome-user"></span><input type="text" placeholder="Usuario" autocomplete="off" required [(ngModel)]="login.name">
-  <span class="fontawesome-lock"></span><input type="password" name="password" id="password" placeholder="Senha" autocomplete="off" required [(ngModel)]="login.password">
-      <input type="submit" value="Sign in" title="Register">
+  <span class="fontawesome-user"></span><input type="text" placeholder="Usuario" autocomplete="off" [(ngModel)]="login.login" required >
+  <span class="fontawesome-lock"></span><input type="password" name="password" id="password" placeholder="Senha" autocomplete="off" [(ngModel)]="login.password" required>
+      <input type="submit" value="Sign in" title="Register" [disabled]="form.form.invalid">
 
   <nav>
-      <input class="CreateNewAccount" type="routerLink=/create-account" value="Create new Account">
+      <button class="CreateNewAccount" (click)="goToCreateAcc()">CreateNewAccount</button>
   </nav>
 
 </form>
