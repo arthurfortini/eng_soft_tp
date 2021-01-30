@@ -12,23 +12,18 @@ export class AccountService {
   constructor( private http: HttpClient ) { }
 
   async toLogin (usuario: any){
-
-    const result = await this.http.post<any>(`${environment.api}/users/login`, usuario).toPromise();
-    if(result){
-      console.log(result.status);
-      window.localStorage.setItem('token', result.status);
-      return true;
-    }
-    else {
-      console.log(result);
-      return false;
-    }
+    try {
+        let result = await this.http.post<any>(`${environment.api}/users/login`, usuario).toPromise();
+        return true;
+      } catch (error) {
+        return false;
+      }
   }
 
   async createAccount (newacc: any){
     let name = newacc.login;
     const result = await this.http.post<any>(`${environment.api}/users/`+`${name}`, newacc).toPromise();
-    return result
+    return result;
   }
 
   getAuthorizationToken(){

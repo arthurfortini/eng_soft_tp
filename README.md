@@ -20,7 +20,7 @@ Além disso, os usuários poderão se adicionar como amigos.
 ## Proposta de Tecnologias:
 
 - Backend: Java (SpringBoot), Maven, swagger
-- Frontend: React.js
+- Frontend: Angular.js
 - Banco de dados relacional em memória H2
 - Gerenciamento do projeto e comunicação:  SCRUM, Trello, Discord/Teams
 

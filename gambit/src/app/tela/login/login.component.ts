@@ -22,9 +22,15 @@ export class LoginComponent implements OnInit {
 
     try {
       const enter = await this.accountService.toLogin(this.login);
-      console.log(`Login efetuado {$result}`);
 
-      this.router.navigate(['']);
+      if(enter){
+        console.log(`Login efetuado`);
+        this.router.navigate(['perfil']);
+      }
+      else {
+        alert('Wrong password and/or user account');
+        this.router.navigate(['']);
+      }
     }catch(error){
       console.error("erro");
     }

@@ -11,15 +11,14 @@ import { User } from 'src/User';
 })
 export class AccountComponent implements OnInit {
 
-  account: User = {
+  account = {
     login: '',
     password: '',
     full_name: '',
     age: 0,
-    created_at: '',
-    city_code: '',
-    avaible_in: '',
-    cellphone: '',
+    city_name: '',
+    available_in: '',
+    cell_phone: '',
     home_phone:'',
     insta: '',
     face: '',
@@ -30,10 +29,11 @@ export class AccountComponent implements OnInit {
 
   async onSubmit(){
     try {
-      const result = await this.accountService.createAccount(this.account);
 
-      window.alert("YOur account has been created!");
-      console.log(result);
+      const result = await this.accountService.createAccount(this.account);
+      alert("Your account has been created!");
+      location.href = '/login';
+
     } catch(error){
       console.error(error);
     }
