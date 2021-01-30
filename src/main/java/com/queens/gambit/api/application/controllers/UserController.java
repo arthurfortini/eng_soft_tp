@@ -10,6 +10,7 @@ import io.swagger.model.UserLoginRequest;
 import io.swagger.model.UserRequest;
 import io.swagger.model.UserResponse;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,7 @@ import javax.inject.Inject;
 import javax.validation.Valid;
 import java.util.List;
 
+@CrossOrigin
 @RestController
 public class UserController implements UsersApi {
 

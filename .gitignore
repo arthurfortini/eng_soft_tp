@@ -26,3 +26,5 @@ hs_err_pid*
 target/
 .idea/
 .DS_Store
+package-lock.json
+package-lock.json
