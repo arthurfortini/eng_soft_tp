@@ -13,7 +13,7 @@ export class PesquisaComponent implements OnInit {
   constructor( private http: HttpClient ) { }
 
   gameToSearch: string = '';
-  users:any = '';
+  users: any = '';
 
   async searchGames(){
     let games = await this.http.get<any>(`${environment.api}/games/`+`${this.gameToSearch}`).toPromise();

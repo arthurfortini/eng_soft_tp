@@ -4,7 +4,7 @@
 <button (click)="searchGames()">Pesquisar</button>
 
 <div class="games-returned" *ngFor="let user of users">
-  <span>{{user.full_name}}</span>
+  <span>{{user.full_name}} - {{user.login}}</span>
 </div>
 
 
