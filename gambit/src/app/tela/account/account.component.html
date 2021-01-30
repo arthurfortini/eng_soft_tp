@@ -2,10 +2,16 @@
 <p class="texto">Registro</p>
 <div class="Registro">
 <form>
-
-  <span class="fontawesome-user"></span><input type="text" required placeholder="User" autocomplete="off">
-  <span class="fontawesome-envelope-alt"></span><input type="text" id="email" required placeholder="Email" autocomplete="off">
-  <span class="fontawesome-lock"></span><input type="password" name="password" id="password" required placeholder="Password" autocomplete="off">
-      <input type="submit" value="Register" title="Register">
-
+  <span class="fontawesome-user"></span><input type="text" placeholder="Usuario" autocomplete="off" [(ngModel)]="account.login" name="login" required >
+  <span class="fontawesome-lock"></span><input type="password" placeholder="Senha" autocomplete="off" [(ngModel)]="account.password" name="password" required>
+  <span class="fontawesome-user"></span><input type="text" placeholder="Full Name" autocomplete="off" [(ngModel)]="account.full_name" name="fullName" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Age" autocomplete="off" [(ngModel)]="account.age" name="age" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="City" autocomplete="off" [(ngModel)]="account.city_name" name="cityName" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Cellphone" autocomplete="off" [(ngModel)]="account.cell_phone" name="cellPhone" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Home phone" autocomplete="off" [(ngModel)]="account.home_phone" name="homePhone" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Instagram" autocomplete="off" [(ngModel)]="account.insta" name="insta" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Twitter" autocomplete="off" [(ngModel)]="account.twitter" name="twitter" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Facebook" autocomplete="off" [(ngModel)]="account.face" name="face" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Available-In" autocomplete="off" [(ngModel)]="account.available_in" name="availableIn" required >
+      <input type="submit" value="Create" title="Register">
 </form>

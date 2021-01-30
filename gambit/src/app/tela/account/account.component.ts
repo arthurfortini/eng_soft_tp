@@ -9,17 +9,34 @@ import { User } from 'src/User'
 })
 export class AccountComponent implements OnInit {
 
-  create_account: User = {
+  account = {
     login: '',
     password: '',
     full_name: '',
     age: 0,
-    created_at: '',
-    city_code: '',
-    avaible_in: ''
+    city_name: '',
+    available_in: '',
+    cell_phone: '',
+    home_phone:'',
+    insta: '',
+    face: '',
+    twitter: ''
   }
 
-  constructor() { }
+  constructor( private http: HttpClient, private accountService: AccountService) { }
+
+  async onSubmit(){
+    try {
+      console.log("CONTA:");
+      console.log(this.account);
+      const result = await this.accountService.createAccount(this.account);
+
+      alert("Your account has been created!");
+      location.href = '/login';
+    } catch(error){
+      console.error(error);
+    }
+  }
 
   ngOnInit(): void {
   }
