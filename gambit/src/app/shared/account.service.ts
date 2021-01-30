@@ -14,19 +14,20 @@ export class AccountService {
   async toLogin (usuario: any){
 
     const result = await this.http.post<any>(`${environment.api}/users/login`, usuario).toPromise();
-    if(result){ //nao tenho certeza se isso funcionara, tenho q debuggar e ver oq o result retorna para consertar e fazer a checagem certa
-      console.log(result); //Ver como a cara desse result vai ser
-      window.localStorage.setItem('token', result);
+    if(result){
+      console.log(result.status);
+      window.localStorage.setItem('token', result.status);
       return true;
     }
     else {
-      console.log(result); //Checa se deu problema no BD (se pelo menos o post foi enviado)
+      console.log(result);
       return false;
     }
   }
 
   async createAccount (newacc: any){
-    const result = await this.http.post<any>(`${environment.api}/users/`, newacc).toPromise();
+    let name = newacc.login;
+    const result = await this.http.post<any>(`${environment.api}/users/`+`${name}`, newacc).toPromise();
     return result
   }
 

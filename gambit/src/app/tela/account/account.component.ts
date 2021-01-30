@@ -2,9 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from 'src/app/shared/account.service';
 
-import { User } from 'src/User'
-
-import { User } from 'src/User'
+import { User } from 'src/User';
 
 @Component({
   selector: 'app-account',

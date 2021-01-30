@@ -2,7 +2,7 @@
 <div class="Login">
 <form (ngSubmit)="onSubmit()" #form="ngForm">
 
-  <span class="fontawesome-user"></span><input type="text" placeholder="Usuario" autocomplete="off" [(ngModel)]="login.login" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Usuario" autocomplete="off" name="login" [(ngModel)]="login.login" required >
   <span class="fontawesome-lock"></span><input type="password" name="password" id="password" placeholder="Senha" autocomplete="off" [(ngModel)]="login.password" required>
       <input type="submit" value="Sign in" title="Register" [disabled]="form.form.invalid">
 
