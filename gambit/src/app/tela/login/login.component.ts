@@ -42,8 +42,7 @@ export class LoginComponent implements OnInit {
       if(enter){
         console.log(`Login efetuado`);
         this.usuario = await this.http.get<any>(`${environment.api}/users/`+`${this.login.login}`).toPromise();
-        console.log(this.usuario.insta);
-        console.log(this.usuario.age);
+        window.localStorage.setItem('usuario',JSON.stringify(this.usuario));
         this.router.navigate(['perfil']);
       }
       else {

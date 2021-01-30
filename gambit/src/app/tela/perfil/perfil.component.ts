@@ -9,6 +9,7 @@ import { User } from 'src/User';
 
 export class PerfilComponent implements OnInit {
 
+  usuarioAtual:User = JSON.parse(window.localStorage.getItem("usuario") || "{}");
 
   constructor() { }
 
