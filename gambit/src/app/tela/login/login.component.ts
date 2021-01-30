@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from 'src/app/shared/account.service';
 import { User } from 'src/User';
+import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +18,21 @@ export class LoginComponent implements OnInit {
     password: ''
   }
 
-  constructor( private accountService: AccountService, private router: Router) { }
+  usuario = {
+    login: '',
+    password: '',
+    full_name: '',
+    age: 0,
+    city_name: '',
+    available_in: '',
+    cell_phone: '',
+    home_phone:'',
+    insta: '',
+    face: '',
+    twitter: ''
+  }
+
+  constructor( private accountService: AccountService, private router: Router, private http: HttpClient ) { }
 
   async onSubmit(){
 
@@ -25,6 +41,9 @@ export class LoginComponent implements OnInit {
 
       if(enter){
         console.log(`Login efetuado`);
+        this.usuario = await this.http.get<any>(`${environment.api}/users/`+`${this.login.login}`).toPromise();
+        console.log(this.usuario.insta);
+        console.log(this.usuario.age);
         this.router.navigate(['perfil']);
       }
       else {
