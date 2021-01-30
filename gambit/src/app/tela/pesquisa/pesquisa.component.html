@@ -1,0 +1,12 @@
+<h2>Pesquisa</h2>
+
+<span class="fontawesome-user"></span><input type="text" placeholder="Search" autocomplete="off" name="game" [(ngModel)]="gameToSearch" required >
+<button (click)="searchGames()">Pesquisar</button>
+
+<div class="games-returned" *ngFor="let user of users">
+  <span>{{user.full_name}}</span>
+</div>
+
+
+
+
