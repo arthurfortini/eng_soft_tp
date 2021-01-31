@@ -45,7 +45,7 @@ input {
   line-height: 48px;
   position: absolute;
   text-align: center;
-  width: 36px;
+  width: 81px;
 }
 
 .Login input {
@@ -87,19 +87,12 @@ input {
 }
 
 .Login input[type="submit"] {
-  background-color: #2c90c6;
-  border: 1px solid #2c90c6;
-  border-radius: 15px;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
+  background-color: #000;
   color: #fff;
-  font-weight: bold;
   line-height: 48px;
   text-align: center;
-  text-transform: uppercase;
-  width: 240px;
+  width: 118px;
+  font-size: 14px;
 }
 
 .CreateNewAccount {
@@ -115,8 +108,8 @@ input {
 }
 
 .Login input[type="submit"]:hover {
-  background-color: #2c70c6;
-  box-shadow: 2px 2px 20px #2c90c6, #fff 0 -1px 2px;
+  background-color: #cccccc;
+  color: #000;
 }
 
 .texto {
@@ -124,7 +117,7 @@ input {
   font-size: 40px;
   margin: 2% auto;
   text-align: center;
-  font-family: "Titan One";
+  font-family:Consolas,"courier new";
   text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
   padding-top: 40px;
 }
@@ -132,3 +125,5 @@ input {
 p:hover {
   text-shadow: 2px 2px 20px #2c90c6, #fff 0 -1px 2px;
 }
+
+
