@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "gambit"
+  "defaultProject": "gambit",
+  "cli": {
+    "analytics": false
+  }
 }
