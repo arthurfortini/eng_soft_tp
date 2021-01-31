@@ -91,6 +91,7 @@ input {
 .Registro input[type="submit"]:hover {
   background-color: #ccc;
   color: #000000;
+  cursor: pointer;
 }
 
 .texto {

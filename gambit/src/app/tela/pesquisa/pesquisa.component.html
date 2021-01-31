@@ -10,36 +10,48 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
 <body class="w3-light-grey">
 
-<div class="w3-content" style="max-width:1400px">
+<div class="w3-content w3-light-grey" style="max-width:1400px" id = "page-container" >
 
-<!-- Header -->
-<header class="w3-container w3-center w3-padding-32">
-  <h1><b>Queen's Gambit</b></h1>
-  <h2>Pesquisa</h2>
-</header>
+  <!-- Header -->
+  <header class="w3-container w3-center w3-padding-32">
+    <h1><b>Queen's Gambit</b></h1>
+    <h2>Encontre seu Player 2</h2>
+  </header>
 
-<div class="w3-center">
+  <div class="w3-center" id = "content-warp">
 
-  <input type="text" placeholder="Digite um Jogo" autocomplete="off" name="game" [(ngModel)]="gameToSearch" required >
-  <button class="w3-button w3-black w3-padding-large" (click)="searchGames()">Pesquisar</button>
-</div>
-
-
-<div class="w3-card-4 w3-margin w3-light-gray">
-  <div class="w3-container w3-padding">
-    <h4>Resultados da pesquisa</h4>
+    <input type="text" placeholder="Digite um Jogo" autocomplete="off" name="game" [(ngModel)]="gameToSearch" required >
+    <button class="w3-button w3-black w3-padding-large" (click)="searchGames()">Pesquisar</button>
   </div>
-  <ul class="w3-ul w3-hoverable w3-white">
-      <div class="games-returned " *ngFor="let user of users" (click)="goToUserPage(user.login)">
-        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-          <img src="https://cdn.pixabay.com/photo/2013/07/13/12/49/game-160398_960_720.png" alt="Image" class="w3-left w3-margin-right" style="height:20px">
-          <span>{{user.full_name}} - {{user.login}}</span>
-        </li>
-      </div>
-  </ul>
-</div>
 
-<!-- Footer -->
+
+  <div class="w3-card-4 w3-margin w3-light-gray">
+    <div class="w3-container w3-padding">
+      <h4>Resultados da pesquisa</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+        <div class="games-returned " *ngFor="let user of users" (click)="goToUserPage(user.login)">
+          <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+            <img src="https://cdn.pixabay.com/photo/2013/07/13/12/49/game-160398_960_720.png" alt="Image" class="w3-left w3-margin-right" style="height:20px">
+            <span>{{user.full_name}} - {{user.login}}</span>
+          </li>
+        </div>
+    </ul>
+  </div>
+  <div class="w3-content w3-light-grey" id="content-warp"></div>
+
+
+  <!-- Footer -->
 <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top" id="footer">
   <p>Desenvolvido para Engenharia de Software <a href="https://github.com/arthurfortini/eng_soft_tp/" target="_blank">GitHub</a></p>
 </footer>
+
+</div>
+
+
+</body>
+
+
+
+
+

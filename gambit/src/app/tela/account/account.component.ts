@@ -15,7 +15,7 @@ export class AccountComponent implements OnInit {
     login: '',
     password: '',
     full_name: '',
-    age: 0,
+    age: '',
     city_name: '',
     available_in: '',
     cell_phone: '',

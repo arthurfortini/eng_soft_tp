@@ -100,6 +100,7 @@ input {
 .Login input[type="submit"]:hover {
   background-color: #cccccc;
   color: #000;
+  cursor: pointer;
 }
 
 .texto {
@@ -143,4 +144,20 @@ input {
 
 .w3-padding-large{
   margin-top: 20px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+ 
 }
