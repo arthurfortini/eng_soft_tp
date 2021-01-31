@@ -1,0 +1,11 @@
+input{
+    margin-left: 9px;
+    padding-left: 155px;
+    border-radius: 0;
+}
+
+.w3-padding-large{
+    padding:5px 24px !important;
+    margin-left: 10px;
+    margin-bottom: 4px;
+}
