@@ -140,3 +140,7 @@ input {
   transform: translate(-50%, -50%);
   color: white;
 }
+
+.w3-padding-large{
+  margin-top: 20px;
+}

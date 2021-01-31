@@ -1,16 +1,44 @@
-<p class="texto">Create an account</p>
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<div class="w3-content" style="max-width:1400px">
+
+  <header class="w3-container w3-center" style="padding: 0.01em 53px;">
+    <div class="banner">
+      <div class="banner-txt">
+        <h1><b>QUEEN'S GAMBIT</b></h1>
+        <p>Criar conta</p>
+      </div>
+    </div>
+  </header>
+
 <div class="Registro">
 <form (ngSubmit)="onSubmit()" #form="ngForm">
   <span class="fontawesome-user"></span><input type="text" placeholder="Usuario" autocomplete="off" [(ngModel)]="account.login" name="login" required >
   <span class="fontawesome-lock"></span><input type="password" placeholder="Senha" autocomplete="off" [(ngModel)]="account.password" name="password" required>
-  <span class="fontawesome-user"></span><input type="text" placeholder="Full Name" autocomplete="off" [(ngModel)]="account.full_name" name="fullName" required >
-  <span class="fontawesome-user"></span><input type="text" placeholder="Age" autocomplete="off" [(ngModel)]="account.age" name="age" required >
-  <span class="fontawesome-user"></span><input type="text" placeholder="City" autocomplete="off" [(ngModel)]="account.city_name" name="cityName" required >
-  <span class="fontawesome-user"></span><input type="text" placeholder="Cellphone" autocomplete="off" [(ngModel)]="account.cell_phone" name="cellPhone" required >
-  <span class="fontawesome-user"></span><input type="text" placeholder="Home phone" autocomplete="off" [(ngModel)]="account.home_phone" name="homePhone" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Nome completo" autocomplete="off" [(ngModel)]="account.full_name" name="fullName" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Idade" autocomplete="off" [(ngModel)]="account.age" name="age" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Cidade" autocomplete="off" [(ngModel)]="account.city_name" name="cityName" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Celular" autocomplete="off" [(ngModel)]="account.cell_phone" name="cellPhone" required >
+  <span class="fontawesome-user"></span><input type="text" placeholder="Telefone" autocomplete="off" [(ngModel)]="account.home_phone" name="homePhone" required >
   <span class="fontawesome-user"></span><input type="text" placeholder="Instagram" autocomplete="off" [(ngModel)]="account.insta" name="insta" required >
   <span class="fontawesome-user"></span><input type="text" placeholder="Twitter" autocomplete="off" [(ngModel)]="account.twitter" name="twitter" required >
   <span class="fontawesome-user"></span><input type="text" placeholder="Facebook" autocomplete="off" [(ngModel)]="account.face" name="face" required >
-  <span class="fontawesome-user"></span><input type="text" placeholder="Available-In" autocomplete="off" [(ngModel)]="account.available_in" name="availableIn" required >
-      <input type="submit" value="Create" title="Register">
+  <span class="fontawesome-user"></span><input type="text" placeholder="Disponibilidade" autocomplete="off" [(ngModel)]="account.available_in" name="availableIn" required >
+      <input type="submit" value="Create" title="Register" >
 </form>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <p>Desenvolvido para Engenharia de Software <a href="https://github.com/arthurfortini/eng_soft_tp/" target="_blank">GitHub</a></p>
+</footer>
