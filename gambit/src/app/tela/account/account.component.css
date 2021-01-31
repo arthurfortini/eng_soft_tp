@@ -83,13 +83,14 @@ input {
   font-weight: bold;
   line-height: 48px;
   text-align: center;
-  text-transform: uppercase;
+  font: "courier new";
   width: 240px;
   margin-top: 20px;
 }
 
 .Registro input[type="submit"]:hover {
   background-color: #ccc;
+  color: #000000;
 }
 
 .texto {

@@ -9,3 +9,9 @@ input{
     margin-left: 10px;
     margin-bottom: 4px;
 }
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
