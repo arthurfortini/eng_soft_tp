@@ -20,66 +20,105 @@ and is wrapped around the whole page content, except for the footer in this exam
   <p>Bem vindo de volta, <span class="w3-tag">{{usuarioAtual.login}}</span></p>
 </header>
 
+
+
 <!-- Grid -->
 <div class="w3-row">
-<!-- Blog entries -->
-<div class="w3-col l8 s12">
-  <!-- lista de jogos entry -->
-  <div class="w3-card-4 w3-margin w3-light-gray">
-    <div class="w3-container w3-padding">
-      <h4>Meus jogos</h4>
+  <!-- Blog entries -->
+  <div class="w3-col l8 s12">
+    <!-- lista de jogos entry -->
+    <div class="w3-card-4 w3-margin w3-light-gray">
+      <div class="w3-container w3-padding">
+        <h4>Meus Jogos</h4>
+      </div>
+      <ul class="w3-ul w3-hoverable w3-white" *ngFor="let jogo of listaJogos">
+  
+        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+          <img src="https://cdn.pixabay.com/photo/2013/07/13/12/49/game-160398_960_720.png" alt="Image" class="w3-left w3-margin-right" style="height:20px">
+          <span class="w3-large">{{jogo.full_name}}</span><br>
+        </li>
+      </ul>
     </div>
-    <ul class="w3-ul w3-hoverable w3-white">
-      <li class="w3-padding-16">
-        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Lorem</span><br>
-        <span>Sed mattis nunc</span>
-      </li>
-      <li class="w3-padding-16">
-        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Ipsum</span><br>
-        <span>Praes tinci sed</span>
-      </li>
-      <li class="w3-padding-16">
-        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Dorum</span><br>
-        <span>Ultricies congue</span>
-      </li>
-      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Mingsum</span><br>
-        <span>Lorem ipsum dipsum</span>
-      </li>
-    </ul>
-  </div>
-  <hr>
 
 
-<!-- END BLOG ENTRIES -->
-</div>
-
-<!-- Introduction menu -->
-<div class="w3-col l4">
-  <!-- About Card -->
-  <div class="w3-card w3-margin w3-margin-top">
-    <button class="w3-button w3-black w3-padding-large w3-center" (click)="goToSearchPage()">Pesquisar</button>
-  </div>
-  <div class="w3-card w3-margin w3-margin-top">
+    <div class="w3-card-4 w3-margin w3-light-gray">
+      <div class="w3-container w3-padding">
+        <h4>Lista de Desejos</h4>
+      </div>
+      <ul class="w3-ul w3-hoverable w3-white" *ngFor="let desejo of listaDesejos">
   
-  <img src="https://www.thesprucecrafts.com/thmb/nI7kklP1EVf87ZEonHq-m42UnGo=/1817x1363/smart/filters:no_upscale()/Kingandqueenchesspieces-GettyImages-667749253-59f9021222fa3a0011f661f2.jpg" style="width:100%">
-    <div class="w3-container w3-white">
-      <h4><b>{{usuarioAtual.full_name}}</b></h4>
-      <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+          <img src="https://img.freepik.com/free-icon/present-box-with-big-bow_318-9536.jpg?size=338&ext=jpg" alt="Image" class="w3-left w3-margin-right" style="height:20px">
+          <span class="w3-large">{{desejo.full_name}}</span><br>
+        </li>
+      </ul>
     </div>
-  </div><hr>
+
+    <div class="w3-card-4 w3-margin w3-light-gray">
+      <div class="w3-container w3-padding">
+        <h4>Informações Pessoais</h4>
+      </div>
+      <ul class="w3-ul w3-hoverable w3-white">
+  
+        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+          <img src="https://img.flaticon.com/icons/png/512/0/191.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" alt="Image" class="w3-left w3-margin-right" style="height:20px">
+          <span class="w3-large">Celular</span><br>
+          <span>{{usuarioAtual.cell_phone}}</span>
+        </li>
+        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+          <img src="https://images-ext-1.discordapp.net/external/-XdbKXg2ohlq-qUU17uNH50dK5_R6F5mBWmcKgBO_nI/https/static.thenounproject.com/png/52971-200.png" alt="Image" class="w3-left w3-margin-right" style="height:20px">
+          <span class="w3-large">Fixo</span><br>
+          <span>{{usuarioAtual.home_phone}}</span>
+        </li>
+        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+          <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png" alt="Image" class="w3-left w3-margin-right" style="height:20px">
+          <span class="w3-large">Twitter</span><br>
+          <span>{{usuarioAtual.twitter}}</span>
+        </li>
+        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+          <img src="https://images-ext-2.discordapp.net/external/CtIiHCFeQdJDn-x4yjuDeAMY97862Z2GaWAUYSGm014/https/image.flaticon.com/icons/png/512/87/87390.png?width=458&height=458" alt="Image" class="w3-left w3-margin-right" style="height:20px">
+          <span class="w3-large">Instagram</span><br>
+          <span>{{usuarioAtual.insta}}</span>
+        </li>
+        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+          <img src="https://images-ext-1.discordapp.net/external/gb5Se_rHmulHBoSeU3EHC5OffD-kEV9KW4TNrMHXxYs/https/cdn.iconscout.com/icon/free/png-512/facebook-social-media-fb-logo-square-44659.png?width=458&height=458" alt="Image" class="w3-left w3-margin-right" style="height:20px">
+          <span class="w3-large">Facebook</span><br>
+          <span>{{usuarioAtual.face}}</span>
+        </li>
+        
+
+
+      </ul>
+    </div>
+
+
+    <hr>
+  </div>
 
   
-  
 
 
 
-<!-- END Introduction Menu -->
-</div>
+
+
+
+  <!-- Introduction menu -->
+  <div class="w3-col l4">
+    <!-- About Card -->
+    <div class="w3-card w3-margin w3-margin-top">
+      <button class="w3-button w3-black w3-padding-large w3-center" (click)="goToSearchPage()">Pesquisar</button>
+    </div>
+    <div class="w3-card w3-margin w3-margin-top">
+    
+    <img src="https://www.thesprucecrafts.com/thmb/nI7kklP1EVf87ZEonHq-m42UnGo=/1817x1363/smart/filters:no_upscale()/Kingandqueenchesspieces-GettyImages-667749253-59f9021222fa3a0011f661f2.jpg" style="width:100%">
+      <div class="w3-container w3-white">
+        <h4><b>{{usuarioAtual.full_name}}</b></h4>
+        <p>Olá Stalker, bem vindo ao meu perfil! Adoro jogar Pandemic mas não se esqueça de dar uma olhadinha na minha lista de desejos :) </p>
+      </div>
+    </div><hr>
+   
+  <!-- END Introduction Menu -->
+  </div>
 
 <!-- END GRID -->
 </div><br>

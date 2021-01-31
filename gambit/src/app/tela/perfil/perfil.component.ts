@@ -10,15 +10,19 @@ import { Router } from '@angular/router';
 
 export class PerfilComponent implements OnInit {
 
-  usuarioAtual:User = JSON.parse(window.localStorage.getItem("usuario") || "{}");
+  usuarioAtual:any = JSON.parse(window.localStorage.getItem("usuario") || "{}");
 
   constructor( private router: Router) { }
-
+  listaJogos = this.usuarioAtual.user_owned_games;
+  listaDesejos = this.usuarioAtual.user_wanted_games;
+  
   ngOnInit(): void {
   }
 
   goToSearchPage(){
     this.router.navigate(['/pesquisa']);
   }
+
+  
 
 }
