@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders} from './http-interceptors';
 import { PesquisaComponent } from './tela/pesquisa/pesquisa.component';
+import { PerfilPesquisadoComponent } from './tela/perfil-pesquisado/perfil-pesquisado.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PesquisaComponent } from './tela/pesquisa/pesquisa.component';
     AuthenticationComponent,
     MainScreenComponent,
     PerfilComponent,
-    PesquisaComponent
+    PesquisaComponent,
+    PerfilPesquisadoComponent
   ],
   imports: [
     BrowserModule,

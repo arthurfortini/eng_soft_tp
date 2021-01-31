@@ -5,6 +5,7 @@ import { MainScreenComponent } from './layout/main-screen/main-screen.component'
 import { AuthguardGuard } from './shared/authguard.guard';
 import { AccountComponent } from './tela/account/account.component';
 import { LoginComponent } from './tela/login/login.component';
+import { PerfilPesquisadoComponent } from './tela/perfil-pesquisado/perfil-pesquisado.component';
 import { PerfilComponent } from './tela/perfil/perfil.component';
 import { PesquisaComponent } from './tela/pesquisa/pesquisa.component';
 
@@ -24,7 +25,8 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent},
       { path: 'create-account', component: AccountComponent},
       { path: 'perfil', component: PerfilComponent},
-      { path: 'pesquisa', component: PesquisaComponent}
+      { path: 'pesquisa', component: PesquisaComponent},
+      { path: 'perfilPesquisado', component: PerfilPesquisadoComponent}
     ]
   }
 ];
